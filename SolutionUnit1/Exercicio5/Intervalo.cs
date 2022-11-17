@@ -5,8 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Exercicio5 {
-    class Intervalo {
-
+    public class Intervalo {
         public DateTime DataTempoIni { get; private set; }
         public DateTime DataTempoFim { get; private set; }
 
@@ -45,4 +44,4 @@ namespace Exercicio5 {
         }
     }
 }
-}
+

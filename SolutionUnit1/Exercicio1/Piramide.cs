@@ -4,18 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercicio1
-{
-    internal class Piramide
-    {
-        private int N;
+namespace Exercicio1 {
+    internal class Piramide {
+        private int _n;
 
-        public int PublicN
-        {
-            get { return N; }
+        public int N {
+            get { return _n; }
             set {
-                if (value >= 1){
-                    N = value;
+                if(value >= 1) {
+                    _n = value;
                     return;
                 }
                 throw new Exception("N deve ser maior ou igual a 1");
@@ -23,19 +20,27 @@ namespace Exercicio1
 
         }
 
-        public void Desenha()
-        {
-            for(int i = 0; i < N; i++) { 
-                Console.Write(i.ToString());
-            }
-            for(int i = 0; i < N; i--) { 
-                Console.Write(i.ToString());
+        public Piramide(int n) {
+            N = n;
+        }
+
+        public void Desenha() {
+            int degrau = 0;
+            int limite = 1;
+            for(int i = 0; i < N; i++) {
+                for(int j = 0; j < N - 1 - degrau; j++) {
+                    Console.Write(" ");
+                }
+                for(int j = 1; j < limite; j++) {
+                    Console.Write(j.ToString());
+                }
+                for(int j = limite; j > 0; j--) {
+                    Console.Write(j.ToString());
+                }
+                degrau++;
+                limite++;
+                Console.WriteLine();
             }
         }
-    }
-    }
-
-
-
     }
 }
