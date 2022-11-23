@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Turma {
-    internal class Turma {
+    public class Turma {
 
         public Dictionary<int, Aluno> BaseAlunos { get; private set; }
 

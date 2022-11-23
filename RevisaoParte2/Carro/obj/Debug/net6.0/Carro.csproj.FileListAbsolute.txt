@@ -1,0 +1,15 @@
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\RevisaoParte2\Carro\obj\Debug\net6.0\Carro.csproj.AssemblyReference.cache
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\RevisaoParte2\Carro\obj\Debug\net6.0\Carro.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\RevisaoParte2\Carro\obj\Debug\net6.0\Carro.AssemblyInfoInputs.cache
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\RevisaoParte2\Carro\obj\Debug\net6.0\Carro.AssemblyInfo.cs
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\RevisaoParte2\Carro\obj\Debug\net6.0\Carro.csproj.CoreCompileInputs.cache
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\RevisaoParte2\Carro\bin\Debug\net6.0\Carro.exe
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\RevisaoParte2\Carro\bin\Debug\net6.0\Carro.deps.json
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\RevisaoParte2\Carro\bin\Debug\net6.0\Carro.runtimeconfig.json
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\RevisaoParte2\Carro\bin\Debug\net6.0\Carro.dll
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\RevisaoParte2\Carro\bin\Debug\net6.0\Carro.pdb
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\RevisaoParte2\Carro\obj\Debug\net6.0\Carro.dll
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\RevisaoParte2\Carro\obj\Debug\net6.0\refint\Carro.dll
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\RevisaoParte2\Carro\obj\Debug\net6.0\Carro.pdb
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\RevisaoParte2\Carro\obj\Debug\net6.0\Carro.genruntimeconfig.cache
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\RevisaoParte2\Carro\obj\Debug\net6.0\ref\Carro.dll

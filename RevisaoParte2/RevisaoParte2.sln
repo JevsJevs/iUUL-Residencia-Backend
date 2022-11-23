@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Propriedades", "Propriedade
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Turma", "Turma\Turma.csproj", "{00947337-F148-420F-94E1-A8AC5F25668A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Curso", "Curso\Curso.csproj", "{EE47E3FB-B5F9-433D-ABE0-032CDCCBC62F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{00947337-F148-420F-94E1-A8AC5F25668A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00947337-F148-420F-94E1-A8AC5F25668A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00947337-F148-420F-94E1-A8AC5F25668A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE47E3FB-B5F9-433D-ABE0-032CDCCBC62F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE47E3FB-B5F9-433D-ABE0-032CDCCBC62F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE47E3FB-B5F9-433D-ABE0-032CDCCBC62F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE47E3FB-B5F9-433D-ABE0-032CDCCBC62F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

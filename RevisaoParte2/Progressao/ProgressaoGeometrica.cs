@@ -11,13 +11,22 @@ namespace Progressao {
         public override int UltimoChamado { get; set; }
         public override int ProximoValor {
             get {
-
+                int retorno = UltimoChamado * Razao;
+                
+                //if(UltimoChamado == 0) {
+                //    retorno = Primeiro;
+                //}
+                    
+                UltimoChamado = retorno;
+                return UltimoChamado;
             }
         }
 
 
         public ProgressaoGeometrica(int primeiro, int razao) : base(primeiro, razao) {
-            UltimoChamado = 0;
+            //UltimoChamado = 0;
+            UltimoChamado = Convert.ToInt32(primeiro/razao);
+
         }
 
         public override int TermoAt(int posicao) {

@@ -2,11 +2,12 @@
 
 using Carro;
 
+
 Motor m = new Motor(1.7f);
 
 Console.WriteLine(m.ToString());
 
-Carro car = new Carro("abc124", "monza", m);
+Carro.Carro car = new Carro.Carro("abc124", "monza", m);
 
 Console.WriteLine(car.ToString());
 

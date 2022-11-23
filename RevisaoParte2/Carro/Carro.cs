@@ -20,6 +20,7 @@ namespace Carro{
             Placa = placa;
             Modelo = modelo;
             MotorInstalado = motor;
+            motor.CarroInstalado = this;
         }
 
         public Motor TrocarMotor(Motor m) {
@@ -29,7 +30,7 @@ namespace Carro{
             Motor motorRetirado = this.MotorInstalado;
             motorRetirado.CarroInstalado = null;
 
-            m.AssociarCarro(this);
+            m.CarroInstalado = this;
             MotorInstalado = m;
 
             return motorRetirado;
