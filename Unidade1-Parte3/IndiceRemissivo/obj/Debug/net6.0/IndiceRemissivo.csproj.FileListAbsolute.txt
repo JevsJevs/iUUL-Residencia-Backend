@@ -1,0 +1,15 @@
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Unidade1-Parte3\IndiceRemissivo\bin\Debug\net6.0\IndiceRemissivo.exe
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Unidade1-Parte3\IndiceRemissivo\bin\Debug\net6.0\IndiceRemissivo.deps.json
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Unidade1-Parte3\IndiceRemissivo\bin\Debug\net6.0\IndiceRemissivo.runtimeconfig.json
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Unidade1-Parte3\IndiceRemissivo\bin\Debug\net6.0\IndiceRemissivo.dll
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Unidade1-Parte3\IndiceRemissivo\bin\Debug\net6.0\IndiceRemissivo.pdb
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Unidade1-Parte3\IndiceRemissivo\obj\Debug\net6.0\IndiceRemissivo.csproj.AssemblyReference.cache
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Unidade1-Parte3\IndiceRemissivo\obj\Debug\net6.0\IndiceRemissivo.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Unidade1-Parte3\IndiceRemissivo\obj\Debug\net6.0\IndiceRemissivo.AssemblyInfoInputs.cache
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Unidade1-Parte3\IndiceRemissivo\obj\Debug\net6.0\IndiceRemissivo.AssemblyInfo.cs
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Unidade1-Parte3\IndiceRemissivo\obj\Debug\net6.0\IndiceRemissivo.csproj.CoreCompileInputs.cache
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Unidade1-Parte3\IndiceRemissivo\obj\Debug\net6.0\IndiceRemissivo.dll
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Unidade1-Parte3\IndiceRemissivo\obj\Debug\net6.0\refint\IndiceRemissivo.dll
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Unidade1-Parte3\IndiceRemissivo\obj\Debug\net6.0\IndiceRemissivo.pdb
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Unidade1-Parte3\IndiceRemissivo\obj\Debug\net6.0\IndiceRemissivo.genruntimeconfig.cache
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Unidade1-Parte3\IndiceRemissivo\obj\Debug\net6.0\ref\IndiceRemissivo.dll
