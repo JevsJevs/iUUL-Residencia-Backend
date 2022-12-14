@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Extensoes/1.0.0": {
+        "dependencies": {
+          "ManipulaJson": "1.0.0"
+        },
+        "runtime": {
+          "Extensoes.dll": {}
+        }
+      },
+      "ManipulaJson/1.0.0": {
+        "runtime": {
+          "ManipulaJson.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Extensoes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ManipulaJson/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

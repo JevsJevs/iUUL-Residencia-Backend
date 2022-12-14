@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ValidacaoCliente {
+namespace ManipulaJson {
     internal class Erro {
 
         public string Campo { get; private set; }

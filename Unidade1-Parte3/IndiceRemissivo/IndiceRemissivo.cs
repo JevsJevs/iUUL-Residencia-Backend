@@ -16,11 +16,17 @@ namespace IndiceRemissivo {
 
             if(!File.Exists(pathTxt)) throw new ArgumentException($"{pathTxt} não existe");
             if(pathIgnore != null && !File.Exists(pathIgnore)) throw new ArgumentException($"{pathIgnore} não existe");
-            
-            // para cada linha executar separar palavra, e criar uma estrutura de dados, provavelmente um dics de OcorrenciaPalavra, alimentando suas props
+
+            List<string> removeList = new List<string>();
+            if(pathIgnore != null) {
+                foreach(string linha in File.ReadLines(pathIgnore)) {
+                    removeList.AddRange(linha.ToUpper().Split(" "));
+                }
+            }
+
             int counterLinha = 1;
             foreach(string linha in File.ReadLines(pathTxt)) {
-                string[] palavras = SepararPalavras(linha, null);
+                string[] palavras = SepararPalavras(linha, removeList);
 
                 foreach(string palavra in palavras) {
                     if(Ocorrencias.ContainsKey(palavra))
@@ -33,7 +39,7 @@ namespace IndiceRemissivo {
             }
         }
 
-        private string[] SepararPalavras(string linha, string[] removeList) {
+        private string[] SepararPalavras(string linha, List<string> removeList) {
             
             string[] palavras = linha.Split(' ','.', ',', ';', '<', '>', ':', '\\', '/', '|', '~', '^', '´', '`', '[', ']', '}', '{', '}', '‘', '“', '!', '@', '#', '$','%', '&', '*', '(', ')', '_', '+', '=');
 
@@ -47,8 +53,9 @@ namespace IndiceRemissivo {
             maiusculas.RemoveAll(palavra => (palavra[0] < 41 || palavra[0] > 90));
             
             //Remove palavras proibidas
-            if(removeList != null)
-                maiusculas.RemoveAll(palavra => palavra == removeList[0].ToUpper());
+            // TODO: Verificar se fazer essa verificação aqui é a forma ótima de resolver o problema
+            if(removeList.Count() > 0)
+                maiusculas.RemoveAll(palavra => removeList.Contains(palavra));
 
             return maiusculas.ToArray();
         }
@@ -56,6 +63,7 @@ namespace IndiceRemissivo {
         public void Imprime() {
             foreach(KeyValuePair<string, OcorrenciaPalavra> par in this.Ocorrencias){
                 Console.WriteLine(par.Value.ToString());
+                Console.WriteLine();
             }
         }
     }

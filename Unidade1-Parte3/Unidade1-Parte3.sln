@@ -5,7 +5,9 @@ VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManipulaJson", "ManipulaJson\ManipulaJson.csproj", "{AAA501D1-26A5-4D3E-A49E-A9B57B010B4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndiceRemissivo", "IndiceRemissivo\IndiceRemissivo.csproj", "{A21F50EA-9A51-4360-9445-6148EE6F0508}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IndiceRemissivo", "IndiceRemissivo\IndiceRemissivo.csproj", "{A21F50EA-9A51-4360-9445-6148EE6F0508}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensoes", "Extensoes\Extensoes.csproj", "{4A6754E9-ACE5-4870-BDDE-B7494E84D8A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{A21F50EA-9A51-4360-9445-6148EE6F0508}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A21F50EA-9A51-4360-9445-6148EE6F0508}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A21F50EA-9A51-4360-9445-6148EE6F0508}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A6754E9-ACE5-4870-BDDE-B7494E84D8A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A6754E9-ACE5-4870-BDDE-B7494E84D8A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A6754E9-ACE5-4870-BDDE-B7494E84D8A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A6754E9-ACE5-4870-BDDE-B7494E84D8A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
