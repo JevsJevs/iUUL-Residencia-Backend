@@ -1,0 +1,15 @@
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio1\AgendaDentista\bin\Debug\net6.0\AgendaDentista.exe
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio1\AgendaDentista\bin\Debug\net6.0\AgendaDentista.deps.json
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio1\AgendaDentista\bin\Debug\net6.0\AgendaDentista.runtimeconfig.json
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio1\AgendaDentista\bin\Debug\net6.0\AgendaDentista.dll
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio1\AgendaDentista\bin\Debug\net6.0\AgendaDentista.pdb
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio1\AgendaDentista\obj\Debug\net6.0\AgendaDentista.csproj.AssemblyReference.cache
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio1\AgendaDentista\obj\Debug\net6.0\AgendaDentista.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio1\AgendaDentista\obj\Debug\net6.0\AgendaDentista.AssemblyInfoInputs.cache
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio1\AgendaDentista\obj\Debug\net6.0\AgendaDentista.AssemblyInfo.cs
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio1\AgendaDentista\obj\Debug\net6.0\AgendaDentista.csproj.CoreCompileInputs.cache
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio1\AgendaDentista\obj\Debug\net6.0\AgendaDentista.dll
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio1\AgendaDentista\obj\Debug\net6.0\refint\AgendaDentista.dll
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio1\AgendaDentista\obj\Debug\net6.0\AgendaDentista.pdb
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio1\AgendaDentista\obj\Debug\net6.0\AgendaDentista.genruntimeconfig.cache
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio1\AgendaDentista\obj\Debug\net6.0\ref\AgendaDentista.dll
