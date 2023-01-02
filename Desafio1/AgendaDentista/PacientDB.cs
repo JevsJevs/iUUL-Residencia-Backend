@@ -15,6 +15,24 @@ namespace AgendaDentista {
             this.Store = new SortedDictionary<long, Pacient>();        
         }
 
+        //PacientValidation
+        // Função auxiliar que contém peculiaridades de validação das regras de negócio de pacientes,
+        // fazendo o uso dos utilitarios de validação do projeto
+        // Retorna true se o dado for valido
+        private bool PacientValidation(string query, string input) {
+            bool isValid;
+
+            try {
+                isValid = query == "CPF: " ? !Store.ContainsKey(Convert.ToInt64(input)) : true;
+                if(!isValid) Console.WriteLine("Paciente já cadastrado!");
+            }
+            catch {
+                isValid = false;
+            }
+
+            return ValidationUtils.ExecuteValidation(query, input) && isValid;
+        }
+
         //Cadastrar
         public void RegisterPacient() {
             string[] inputs = new string[3];
@@ -27,7 +45,7 @@ namespace AgendaDentista {
             //Solicita os dados do paciente na ordem do array querries, repete a solicitação se o dado for inválido
             // No caso do cpf verificamos se ele já está cadastrado no Banco (prop Store). Não abstraí isso para a classe validations para não complicar os parâmetros da função 
             for(int i = 0; i < queries.Length; i++) {
-                string input = "";
+                string input;
                 do {
                     Console.Write($"\n{queries[i]}");
 
@@ -35,14 +53,7 @@ namespace AgendaDentista {
                     input = Console.ReadLine() ?? "";
                     inputs[i] = input;
 
-                    //Validação de CPF já cadastrado => Se já houver cadastro substitui por um input inválido para a função de validação disparar
-                    try {
-                        if(i == 0 && Store.ContainsKey(Convert.ToInt64(input)))
-                            input = "0";
-                    } catch(Exception) { input = "0"; }
-
-
-                } while(!ValidationUtils.ExecuteValidation(queries[i], input));
+                } while(!PacientValidation(queries[i],input));
             }
 
             //instanciar Pacient
@@ -51,39 +62,93 @@ namespace AgendaDentista {
             this.Store.Add(paciente.CPF, paciente);
         }
 
-        //Excluir
-        private bool PatientIsRegistered(string cpf) {
-            //if(!ValidationUtils.ExecuteValidation("CPF: ", cpf)) {
-            //    return false;
-            //}
+        public void DeletePatient(ScheduleDB scheduleDB) {
+            string query = "CPF: ";
 
-            if(this.Store.ContainsKey(Convert.ToInt64(cpf))) {
-                return true;
+            bool DeletionValidation(string query, string input) {
+                bool isValid = ValidationUtils.ExecuteValidation(query, input);
+                if(isValid && !Store.ContainsKey(Convert.ToInt64(input))) {
+                    Console.WriteLine("Erro: CPF não cadastrado");
+                    isValid = false;
+                }
+                return isValid;
             }
 
-            Console.WriteLine("Erro: paciente não cadastrado ");
-            return false;
-        }
-
-        public void DeletePatient(ScheduleDB agenda) {
-            string[] queries =  {
-                "CPF: ",
-            };
-
-            //CPF deve existir no cadastro
-            string input;
+            string cpfInput;
             do {
-                input = Console.ReadLine() ?? "";
-            } while(!PatientIsRegistered(input) || !ValidationUtils.ExecuteValidation("CPF: ", input));
+                Console.Write("\n"+query);
+                cpfInput = Console.ReadLine() ?? "";
+            } while(!DeletionValidation(query, cpfInput));
 
-            //Paciente nao pode ter consulta
+            long pacientCPF = Convert.ToInt64(cpfInput);
 
+            //Remover Agendamentos anteriores e futuros
+            var queryAllAppontments = from apt in scheduleDB.AppointmentList
+                                      where apt.PatientCPF == pacientCPF
+                                      select apt;
+
+            List<Appointment> patientAppointments = new List<Appointment>();
+            foreach(Appointment apt in queryAllAppontments) {
+                patientAppointments.Add(apt);
+            }
+
+            //Insere uma nova lista com todos as consultas EXCETO aquelas do paciente sendo removido
+            scheduleDB.AppointmentList = scheduleDB.AppointmentList.Except(patientAppointments).ToList();
+
+            //Remover o paciente
+            Store.Remove(pacientCPF);
         }
 
         //Listar por cpf
         //Listar por nome (Usar LINQ)
+        public void PatientList(int tipo, ScheduleDB scheduleDB) {
+            //https://learn.microsoft.com/en-us/dotnet/csharp/linq/perform-left-outer-joins
+            //Selecionar pacientes e suas consultas futuras (se houverem)
+            var queryConsultasFuturas = from apt in scheduleDB.AppointmentList
+                                        where apt.StartingTime.CompareTo(DateTime.Now) > 0
+                                        select apt;
+
+            //Nas proximas consultas fazemos o join com a consulta anterior para termos o resultado desejado
+            var queryPorNome = from pcte in Store
+                               join apt in queryConsultasFuturas on pcte.Value.CPF equals apt.PatientCPF into pcteWithFutAppointement
+                               from subApt in pcteWithFutAppointement.DefaultIfEmpty()
+                               orderby pcte.Value.Nome
+                               select new { pcte, appointment = subApt };
 
 
+            var queryPorCpf = from pcte in Store 
+                              join apt in queryConsultasFuturas on pcte.Value.CPF equals apt.PatientCPF into pcteWithAppointments
+                              from subApt in pcteWithAppointments.DefaultIfEmpty()
+                              orderby pcte.Key
+                              select new { pcte, appointment = subApt};
 
+            Console.WriteLine("---------------------------------------------------------------------");
+            Console.WriteLine("CPF         Nome                                     Dt.Nasc.   Idade");
+            Console.WriteLine("---------------------------------------------------------------------");
+
+            switch(tipo) {
+                case 0: {
+                        foreach(var item in queryPorCpf) {
+                            Console.WriteLine($"{item.pcte.Value.ToString()}");
+                            if(item.appointment != null) {
+                                Console.WriteLine(new string(' ', 12)+ $"Agendado para: {item.appointment.StartingTime.ToString("dd/MM/yyyy")}");
+                                Console.WriteLine(new string(' ', 12) + $"{item.appointment.StartingTime.ToString("HH:mm")} às {item.appointment.EndingTime.ToString("HH:mm")}");
+                            }
+                        }
+                        break;
+                    }
+                case 1: {
+                        foreach(var item in queryPorNome) {
+                            Console.WriteLine($"{item.pcte.Value.ToString()}");
+                            if(item.appointment != null) {
+                                Console.WriteLine(new string(' ', 12) + $"Agendado para: {item.appointment.StartingTime.ToString("dd/MM/yyyy")}");
+                                Console.WriteLine(new string(' ', 12) + $"{item.appointment.StartingTime.ToString("HH:mm")} às {item.appointment.EndingTime.ToString("HH:mm")}");
+                            }
+                        }
+                        break;
+                    }
+                default: break;
+            }
+        }
     }
 }

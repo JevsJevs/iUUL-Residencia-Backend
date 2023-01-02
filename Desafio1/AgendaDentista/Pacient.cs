@@ -21,5 +21,16 @@ namespace AgendaDentista {
             Nome = nome;
             DataNascimento = Convert.ToDateTime(dataNascimento);
         }
+
+
+        public override string ToString() {
+            
+            string fitToSizeName = Nome.Length > 40 ? Nome.Substring(0,37) + "..." : Nome + new string(' ', 40 - Nome.Length);
+
+            //Por limitações das funcionalidades de time-span(Anos nem sempre tem o mesmo n de dias) esse valor é uma aproximação ~ +/-3dias
+            int idade = DateTime.Now.Subtract(DataNascimento).Days / 365;
+
+            return $"{CPF} {fitToSizeName} {DataNascimento.ToString("dd/MM/yyyy")} {idade}";
+        }
     }
 }
