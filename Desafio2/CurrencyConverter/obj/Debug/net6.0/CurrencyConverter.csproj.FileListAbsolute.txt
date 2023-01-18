@@ -1,0 +1,15 @@
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio2\CurrencyConverter\obj\Debug\net6.0\CurrencyConverter.csproj.AssemblyReference.cache
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio2\CurrencyConverter\obj\Debug\net6.0\CurrencyConverter.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio2\CurrencyConverter\obj\Debug\net6.0\CurrencyConverter.AssemblyInfoInputs.cache
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio2\CurrencyConverter\obj\Debug\net6.0\CurrencyConverter.AssemblyInfo.cs
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio2\CurrencyConverter\obj\Debug\net6.0\CurrencyConverter.csproj.CoreCompileInputs.cache
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio2\CurrencyConverter\bin\Debug\net6.0\CurrencyConverter.exe
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio2\CurrencyConverter\bin\Debug\net6.0\CurrencyConverter.deps.json
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio2\CurrencyConverter\bin\Debug\net6.0\CurrencyConverter.runtimeconfig.json
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio2\CurrencyConverter\bin\Debug\net6.0\CurrencyConverter.dll
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio2\CurrencyConverter\bin\Debug\net6.0\CurrencyConverter.pdb
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio2\CurrencyConverter\obj\Debug\net6.0\CurrencyConverter.dll
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio2\CurrencyConverter\obj\Debug\net6.0\refint\CurrencyConverter.dll
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio2\CurrencyConverter\obj\Debug\net6.0\CurrencyConverter.pdb
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio2\CurrencyConverter\obj\Debug\net6.0\CurrencyConverter.genruntimeconfig.cache
+E:\Projetos\iUUL\BackEnd\iUUL-Residencia-Backend\Desafio2\CurrencyConverter\obj\Debug\net6.0\ref\CurrencyConverter.dll
